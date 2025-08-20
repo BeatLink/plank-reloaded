@@ -15,12 +15,7 @@
       pname = "plank-reloaded";
       version = "latest";
 
-      src = pkgs.fetchFromGitHub {
-        owner = "zquestz";
-        repo = "plank-reloaded";
-        rev = "master";
-        sha256 = "sha256-yHvD6pjVKwIBNYr3GWBMbdqcMdBWgxiwrTKqBfVt7+8=";
-      };
+      src = ./.
 
       nativeBuildInputs = [
         pkgs.meson
@@ -51,7 +46,7 @@
       '';
 
       patches = [
-        ./hide-in-pantheon.patch
+        ./nix/hide-in-pantheon.patch
       ];
 
       meta = with pkgs.lib; {
