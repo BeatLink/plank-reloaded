@@ -15,7 +15,7 @@
       pname = "plank-reloaded";
       version = "latest";
 
-      src = ./.
+      src = ./.;
 
       nativeBuildInputs = [
         pkgs.meson
