@@ -50,7 +50,7 @@
                     '';
 
                     patches = [
-                        ./nix/hide-in-pantheon.patch
+                        ./nix-hide-in-pantheon.patch
                     ];
 
                     meta = with pkgs.lib; {
