@@ -62,5 +62,9 @@
                 default = self.packages.${system}.plank-reloaded;
             });
         defaultPackage = forAllSystems (system: self.packages.${system}.plank-reloaded);
+        defaultApp = forAllSystems (system: {
+            type = "app";
+            program = "${self.packages.${system}.plank-reloaded}/bin/plank";
+        });
     };
 }
